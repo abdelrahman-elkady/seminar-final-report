@@ -16,10 +16,9 @@ is done using wikipedia for example to get the corpus and apply probabilistic me
 However, validating the quality of generated labels is still a challenge, compared to the manually generated labels.
 
 \newParagraph
-In this study, the four visualization techniques mentioned below are used for manual labeling, while the automatic labeling is executed using the
+In this study, the four visualization techniques mentioned below are used for manual labeling, clustering and modeling the corpus is executed using the
 Latent Dirichlet Allocation (LDA) algorithm. LDA works by analyzing the whole document and then apply probabilistic measurement to cluster different documents
 in the corpora into different clusters.
-
 
 \includefig{0.85}{all-vis.png}{Visual labeling methods}{fig:viss}
 \newParagraph
@@ -34,3 +33,20 @@ The visual techniques evaluated in this study are represented in Figure.\ref{fig
 \newParagraph
 Each method is tested against three classes of cardinality, with 5, 10 and 20 words. Results are calculated and measured for next phase along with the automatically
 generated labels for the same cardinalities.
+
+\section{Method and execution}
+\label{sec:method}
+
+The study is conducted online, comparing different visualization techniques on different cardinalities. The data input for this study is collected from New
+ York Times articles, gathering 7,156 article from January 2007. The clustering of topics is executed using the LDA algorithm, while the automatic labeling
+ is done using the wikipedia article technique discussed previously. The manual labeling is done using Amazon Mechanical Turk as  Human Intelligence Tasks (HIT)
+ .
+
+\newParagraph
+The different visualization techniques discussed above are used to label different topics in phase 1. All the visual methods are kept in 400 x 250 pixel space
+to have a consistent comparison. Different methods are discussed below
+
+\subsection{Word List}
+Is the simplest technique of the four. It is a simple word enumeration with each word on a separate line, all equally sized, ordered by probability of occurrence
+in the topic. Words are organized in two columns to fit in the space provided efficiently. Numbers are added beside each word to enforce the order and to avoid
+ambiguity that could occur due to the two column layout.
