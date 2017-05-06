@@ -64,3 +64,17 @@ word tags.
 This technique is the most sophisticated and complex representation, it represents each word in the topic as a node in the graph, while each topic is an
 edge between different nodes. The radius of the nodes is scaled by a ratio calculated according to the probability of word occurrence in the topic. Width and
 color of edges is kept constant to reduce the complexity of the representation.
+
+
+\newParagraph
+The first phase of the study is the labeling phase, where manual labeling of different topics is applied using different visualization techniques. Part of the
+dataset have labels assigned automatically too using the Wikipedia algorithm. Users are asked to give a short label describing the topic, and then have a longer
+sentence as a further description for the topic. Also, users are asked to represent their confidence of their labeling by choosing a value from a scale from 1 to 5
+representing their confidence in their provided label and description of the topic. Each task for a user have 5 labeling tasks from the same visualization technique.
+
+\newParagraph
+The second task is the validation phase. where a new set of users are asked to measure the quality and accuracy of labels generated in phase 1, including the
+automatically generated ones. The study in phase one had three cardinality levels, for the four techniques, generating twelve combination of tasks. Five users
+are doing the labeling task for each topic from the fifty topic in the study, resulting in a minimum of 3,000 user labeling tasks. With each task having five
+tasks from the same visualization technique. In the second phase, 3,212 label is collected from phase one. They are evaluated into 1,500 validation task, without
+allowing duplication of topic/label comparisons. 
