@@ -12,7 +12,7 @@ measuring and selecting best matching labels from the ones generated in the firs
 
 Research in labeling different topic models is being conducted in order to produce high quality labels automatically. Algorithms are implemented
 to generate labels for topic models based on probabilistic approaches. Generating labels
-is done using wikipedia for example to get the corpus and apply probabilistic measurements and match it with the similar wikipedia page
+is done using wikipedia for example to get the corpus and apply probabilistic measurements and match it with the similar wikipedia page \cite{lau}
 However, validating the quality of generated labels is still a challenge, compared to the manually generated labels.
 
 \newParagraph
@@ -39,7 +39,7 @@ generated labels for the same cardinalities.
 
 The study is conducted online, comparing different visualization techniques on different cardinalities. The data input for this study is collected from New
  York Times articles, gathering 7,156 article from January 2007. The clustering of topics is executed using the LDA algorithm, while the automatic labeling
- is done using the wikipedia article technique discussed previously. The manual labeling is done using Amazon Mechanical Turk as  Human Intelligence Tasks (HIT)
+ is done using the wikipedia article technique that was worked by different previous studies. The manual labeling is done using Amazon Mechanical Turk as  Human Intelligence Tasks (HIT)
  .
 
 \newParagraph
@@ -77,4 +77,26 @@ The second task is the validation phase. where a new set of users are asked to m
 automatically generated ones. The study in phase one had three cardinality levels, for the four techniques, generating twelve combination of tasks. Five users
 are doing the labeling task for each topic from the fifty topic in the study, resulting in a minimum of 3,000 user labeling tasks. With each task having five
 tasks from the same visualization technique. In the second phase, 3,212 label is collected from phase one. They are evaluated into 1,500 validation task, without
-allowing duplication of topic/label comparisons. 
+allowing duplication of topic/label comparisons.
+
+\section{Results}
+\label{sec:results}
+
+By analyzing different labeling techniques and validating them in phase one and two respectively, results are collected regarding the labeling time, the confidence,
+and the quality of generated labels from different techniques. The results showed that the complex visualization techniques took more time for users to label
+different topics. While having higher cardinality did have an effect on the labeling speed. Higher cardinality for complex techniques such as the
+network graph showed slower labeling speed compared to lower cardinality of the same technique. High cardinality on simple techniques such as words list and
+word list with bars showed faster labeling than lower cardinality of the same techniques.
+
+\newParagraph
+The self confidence of users during the label tasks was measured during each task, the results show that there is an effect of the visualization technique used
+on the confidence of the user while labeling. The average confidence rating across all techniques is between 3.4 and 3.7, Network graph representation confidence
+level is negatively affected with lower cardinality ( 5 words ).
+
+\newParagraph
+The validation phase results where measured and assessed to qualify the quality of different labeling techniques. The results showed no significant difference between
+different visualization techniques regarding the quality of the labels generated. While the results showed that the quality of the automatically generated labels was better for coherent topics than
+incoherent ones. Generally, the results showed that the manual labeling overpassed automatically generated labels specially for incoherent topics.
+The result showed that users prefer having shorter labels that describes the topic, and the automatically generated labels were longer than the manually generated alternatives
+for the same topics. Also, the results showed that users preferred that the label contains words from the topic itself, by getting some shared words from the topic in the label
+generated to describe this topic.
