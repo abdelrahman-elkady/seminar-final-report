@@ -1,0 +1,105 @@
+\documentclass[11pt, a4paper]{book}%, oneside
+
+\usepackage[headings]{fullpage}
+\usepackage{setspace}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{appendix}
+\usepackage[pdfborder={0 0 0}, colorlinks=true, linkcolor=black, citecolor=blue]{hyperref}
+\usepackage[printonlyused]{acronym}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{ifpdf}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\newcommand{\submissionDay}{06}
+\newcommand{\submissionMonth}{May}
+\newcommand{\submissionYear}{2017}
+\newcommand{\submissionDate}{\submissionDay~\submissionMonth,~\submissionYear}
+
+\newcommand{\reportTitle}{NLP Seminar Report}
+
+\newcommand{\authors}{
+Abdelrahman Hesham Elkady | 28-9799,
+}
+
+\newcommand{\includefig}[4]{
+    \begin{figure}[H]
+     \centering
+      \includegraphics[width=#1\textwidth]{assets/images/#2}
+      \caption{#3}
+      \label{#4}
+    \end{figure}
+}
+
+\newcommand{\includefigWSC}[5]{
+    \begin{figure}[ht]
+     \centering
+      \includegraphics[width=#1\textwidth]{assets/images/#2}
+      \caption[#3]{#4}
+      \label{#5}
+    \end{figure}
+}
+
+\newcommand{\includeeps}[4]{
+\includefig{#1}{#2.eps}{#3}{#4}
+}
+
+\newcommand{\includeepsWSC}[5]{
+\includefigWSC{#1}{#2.eps}{#3}{#4}{#5}
+}
+
+\newcommand{\newParagraph}{
+\vspace{\baselineskip}
+\noindent
+}
+
+\newcommand{\quotes}[1]{``#1''}
+
+\ifpdf
+\pdfinfo {
+	/Author (\authors)
+	/Title (\reportTitle)
+	/Keywords ()
+	/CreationDate (D:20090707085533)
+}
+\fi
+
+\begin{document}
+% \overfullrule=5pt
+\pagestyle{plain}
+\pagenumbering{Roman}
+
+\include{partials/GUC_TitlePage}
+
+\include{partials/abstract}
+
+\tableofcontents
+% \addcontentsline{toc}{chapter}{Contents}
+\clearpage
+
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+\setlength\parskip{.5\baselineskip plus .2\baselineskip minus .4\baselineskip}
+
+\include{partials/introduction}
+\include{partials/conclusion}
+
+\include{partials/appendix}
+
+\raggedright
+\bibliographystyle{ieeetr}
+\bibliography{partials/main}
+\addcontentsline{toc}{chapter}{References}
+
+\end{document}

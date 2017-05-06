@@ -1,0 +1,7 @@
+*~
+report/main.pdf
+node_modules/
+main.zip
+
+# Minted tmp files
+_minted-*
