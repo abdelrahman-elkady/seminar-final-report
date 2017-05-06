@@ -6,3 +6,30 @@ generating labels for different topic models classified manually or programmatic
 for labeling and assessing the correctness of generated labels is conducted. Running over four different visualization techniques, and evaluating them
 over two phases, the labeling phase, where users are labeling the topics using the visualization technique. And the validation phase, where users are
 measuring and selecting best matching labels from the ones generated in the first phase.
+
+\section{Background}
+\label{sec:bg}
+
+Research in labeling different topic models is being conducted in order to produce high quality labels automatically. Algorithms are implemented
+to generate labels for topic models based on probabilistic approaches. Generating labels
+is done using wikipedia for example to get the corpus and apply probabilistic measurements and match it with the similar wikipedia page
+However, validating the quality of generated labels is still a challenge, compared to the manually generated labels.
+\newParagraph
+
+In this study, the four visualization techniques mentioned below are used for manual labeling, while the automatic labeling is executed using the
+Latent Dirichlet Allocation (LDA) algorithm. LDA works by analyzing the whole document and then apply probabilistic measurement to cluster different documents
+in the corpora into different clusters.
+\newParagraph
+
+\includefig{0.85}{all-vis.png}{Visual labeling methods}{fig:viss}
+
+The visual techniques evaluated in this study are represented in Figure.\ref{fig:viss}, they are described as follows:
+\begin{itemize}
+  \item Word list
+  \item Word list with bars
+  \item Word cloud
+  \item Network Graph
+\end{itemize}
+
+Each method is tested against three classes of cardinality, with 5, 10 and 20 words. Results are calculated and measured for next phase along with the automatically
+generated labels for the same cardinalities.
