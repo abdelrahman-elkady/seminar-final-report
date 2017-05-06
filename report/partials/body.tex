@@ -50,3 +50,17 @@ to have a consistent comparison. Different methods are discussed below
 Is the simplest technique of the four. It is a simple word enumeration with each word on a separate line, all equally sized, ordered by probability of occurrence
 in the topic. Words are organized in two columns to fit in the space provided efficiently. Numbers are added beside each word to enforce the order and to avoid
 ambiguity that could occur due to the two column layout.
+
+\subsection{Word List with bars}
+This technique is the same as the word list, while maintaining bars beside each word to indicate its order by probability in the topic.
+
+\subsection{Word Cloud}
+The word cloud represents each word with its probability in the topic affecting its size, words with higher probability in the topic are assigned larger font
+size, while words with less probability are assigned smaller font sizes. When the word is too large to fit in the space, words are scaled accordingly to maintain
+the ratio of word size based on the probability of occurrence in the topic. All words are displayed horizontally with some gray scale to increase readability of
+word tags.
+
+\subsection{Network Graph}
+This technique is the most sophisticated and complex representation, it represents each word in the topic as a node in the graph, while each topic is an
+edge between different nodes. The radius of the nodes is scaled by a ratio calculated according to the probability of word occurrence in the topic. Width and
+color of edges is kept constant to reduce the complexity of the representation.
